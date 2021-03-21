@@ -1,25 +1,35 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>JavaScript a DOM</title>
-	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Source+Sans+Pro:400,400i,700,700i&amp;subset=latin-ext" rel="stylesheet">
-	<link rel="stylesheet" href="style.css">
-</head>
-<body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>JavaScript a DOM</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Source+Sans+Pro:400,400i,700,700i&amp;subset=latin-ext"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <audio id="audio" src="audio/dingdingdang.mp3" preload="auto"></audio>
 
-	<h1>Změna tříd, události</h1>
+    <h1>Audio remote control</h1>
+    <div class="btn-box">
+      <button class="btn" onclick="play('#audio')">Play</button>
+      <button class="btn" onclick="pause('#audio')">Pause</button>
+	    <button class="btn" onclick="play('#audio')">Restart</button>
+      <button class="btn" onclick="volume('#audio', 0)">Volume to 0</button>
+      <button class="btn" onclick="volume('#audio', 0.5)">Volume to 0.5</button>
+      <button class="btn" onclick="volume('#audio', 1)">Volume to 1</button>
+    </div>
 
-	<div class="ctverecek zluty"></div>
+    <h1>Paragraph modifier</h1>
+    <div class="btn-box">
+      <button id="btnIncrease" class="btn">větší po kliknutí</button>
+      <button id="btnRed" class="btn">Barevné po kliknutí</button>
+    </div>
+    <p class="paragraph" id="paragraph">V elipse spí lev</p>
 
-	<div class="ctverecek zeleny"></div>
-
-	<img class="obrazek" src="obrazky/kocka.jpg">
-
-	<button class="tlacitko">Čudlajs</button>
-
-	<audio src="audio/dingdingdang.mp3" preload="auto"></audio>
-
-</body>
+    <script type="text/javascript" src="main.js"></script>
+  </body>
 </html>
